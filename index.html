@@ -8,15 +8,19 @@
 <body>
     <p id="randomnumber"></p>
     <p id="breakdown"></p>
+    <p id="currentdate"></p>
     <script>
         var randomnumber = Math.floor(Math.random()*1001);
         document.getElementById("randomnumber").innerHTML = "Randomly generated number: " + randomnumber;
-
+        
         var thousands = Math.floor(randomnumber/1000);
         var hundreds = Math.floor((randomnumber%1000)/100);
         var tens = Math.floor((randomnumber%100)/10);
         var ones = randomnumber % 10;
         document.getElementById("breakdown").innerHTML = "Breakdown: " + thousands*1000 + ", "+ hundreds*100 + ", " + tens*10 + ", " + ones;
+
+        var currentdate = new Date();
+        document.getElementById("currentdate").innerHTML = currentdate;
     </script>
 </body>
 </html>
